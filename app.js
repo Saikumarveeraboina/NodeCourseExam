@@ -281,7 +281,9 @@ app.put('/todos/:todoId/', checkRequestsBody, async (request, response) => {
   const {todoId} = request
 
   const {priority, todo, status, category, dueDate} = request
+  
 
+  
   let updateTodoQuery = null
 
   console.log(priority, todo, status, dueDate, category)
