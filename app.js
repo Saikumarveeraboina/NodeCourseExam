@@ -87,7 +87,6 @@ const checkRequestsQueries = async (request, response, next) => {
       )
       console.log(result, 'r')
       console.log(new Date(), 'new')
-
       const isValidDate = await isValid(result)
       console.log(isValidDate, 'V')
       if (isValidDate === true) {
@@ -360,9 +359,7 @@ app.delete('/todos/:todoId/', async (request, response) => {
             WHERE 
                id=${todoId}
      ;`
-
   await db.run(deleteTodoQuery)
   response.send('Todo Deleted')
 })
-
 module.exports = app
