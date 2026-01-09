@@ -178,6 +178,7 @@ const checkRequestsBody = (request, response, next) => {
   next()
 }
 
+
 //Get Todos API-1
 app.get('/todos/', checkRequestsQueries, async (request, response) => {
   const {status = '', search_q = '', priority = '', category = ''} = request
