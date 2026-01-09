@@ -15,7 +15,6 @@ const dbPath = path.join(__dirname, 'todoApplication.db')
 let db = null
 
 
-
 const initializeDBAndServer = async () => {
   try {
     db = await open({
