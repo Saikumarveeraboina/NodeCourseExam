@@ -7,7 +7,9 @@ app.use(express.json())
 const format = require('date-fns/format')
 const isValid = require('date-fns/isValid')
 const toDate = require('date-fns/toDate')
+
 const {open} = require('sqlite')
+
 const sqlite3 = require('sqlite3')
 const path = require('path')
 const dbPath = path.join(__dirname, 'todoApplication.db')
@@ -34,6 +36,7 @@ const checkRequestsQueries = async (request, response, next) => {
   const {search_q, category, priority, status, date} = request.query
   const {todoId} = request.params
   if (category !== undefined) {
+    
     const categoryArray = ['WORK', 'HOME', 'LEARNING']
     const categoryIsInArray = categoryArray.includes(category)
     if (categoryIsInArray === true) {
