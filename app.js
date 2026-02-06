@@ -57,6 +57,7 @@ const checkRequestsQueries = async (request, response, next) => {
     }
   }
 
+  
   if (status !== undefined) {
     const statusArray = ['TO DO', 'IN PROGRESS', 'DONE']
     const statusIsInArray = statusArray.includes(status)
